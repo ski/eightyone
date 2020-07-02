@@ -1,10 +1,15 @@
 import { Component, h } from '@stencil/core';
+import {connect} from '../../helpers/polka';
 
 @Component({
   tag: 'app-root',
   styleUrl: 'app-root.css'
 })
 export class AppRoot {
+
+  componentDidLoad() {
+    connect();
+  }
 
   render() {
     return (
